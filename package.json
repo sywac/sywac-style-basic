@@ -1,0 +1,44 @@
+{
+  "name": "sywac-style-basic",
+  "version": "1.0.0",
+  "description": "Basic color styling for your sywac CLI",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "pretest": "standard",
+    "test": "tap --cov test.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sywac/sywac-style-basic.git"
+  },
+  "keywords": [
+    "sywac",
+    "cli",
+    "color",
+    "chalk",
+    "basic",
+    "style",
+    "ansi"
+  ],
+  "author": "nexdrew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sywac/sywac-style-basic/issues"
+  },
+  "homepage": "http://sywac.io/docs/sync-config.html#style",
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "standard": "^12.0.1",
+    "standard-version": "^4.4.0",
+    "sywac": "^1.2.1",
+    "tap": "^12.1.1"
+  }
+}

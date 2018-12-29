@@ -1,29 +1,38 @@
-const chalk = require('chalk')
+let _c
+function c () {
+  if (!_c) _c = require('chalk')
+  return _c
+}
 
 module.exports = {
   // style usage components
   usagePrefix: s => {
-    return chalk.white(s.slice(0, 6)) + ' ' + chalk.magenta(s.slice(7))
+    return c().white(s.slice(0, 6)) + ' ' + c().magenta(s.slice(7))
   },
-  usageCommandPlaceholder: s => chalk.magenta(s),
-  usagePositionals: s => chalk.green(s),
-  usageArgsPlaceholder: s => chalk.green(s),
-  usageOptionsPlaceholder: s => chalk.cyan(s),
+  usageCommandPlaceholder: s => c().magenta(s),
+  usagePositionals: s => c().green(s),
+  usageArgsPlaceholder: s => c().green(s),
+  usageOptionsPlaceholder: s => c().cyan(s),
   // style normal help text
-  group: s => chalk.white(s),
+  group: s => c().white(s),
   flags: (s, type) => {
-    if (type.datatype === 'command') return chalk.magenta(s)
-    return s[0] === '-' ? chalk.cyan(s) : chalk.green(s)
+    if (type.datatype === 'command') {
+      s = s.split(' ')
+      return c().magenta(s[0]) + (s[1] ? ' ' + c().green(s.slice(1).join(' ')) : '')
+    }
+    return s[0] === '-' ? c().cyan(s) : c().green(s)
   },
-  hints: s => chalk.dim(s),
-  example: s => chalk.yellow(s[0]) + s.slice(1),
+  hints: s => c().dim(s),
+  example: s => c().yellow(s[0]) + s.slice(1),
   // use different style when a type is invalid
-  groupError: s => chalk.red(s),
-  flagsError: s => chalk.red(s),
-  descError: s => chalk.yellow(s),
-  hintsError: s => chalk.red(s),
+  groupError: s => c().red(s),
+  flagsError: s => c().red(s),
+  descError: s => c().yellow(s),
+  hintsError: s => c().red(s),
   // style error messages
-  messages: s => chalk.red(s),
+  messages: s => c().red(s),
   // expose chalk
-  chalk
+  get chalk () {
+    return c()
+  }
 }

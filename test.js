@@ -4,6 +4,7 @@ const test = require('tap').test
 const basicStyle = require('./')
 const chalk = basicStyle.chalk
 const sywac = require('sywac')
+  .command('abc', { desc: 'Look ma no args' })
   .command('x <y> [z]', {
     desc: 'Some command',
     paramsDesc: [
@@ -33,7 +34,8 @@ test('works for standard help text', t => {
       chalk`{white Usage:} {magenta test} {magenta <command>} {green <args>} {cyan [options]}`,
       '',
       chalk.white('Commands:'),
-      chalk`  {magenta x <y> [z]}  Some command`,
+      chalk`  {magenta abc}        Look ma no args`,
+      chalk`  {magenta x} {green <y> [z]}  Some command`,
       '',
       chalk.white('Options:'),
       chalk`  {cyan -h, --help}  Show help                 {dim [commands: help] [boolean]}`,

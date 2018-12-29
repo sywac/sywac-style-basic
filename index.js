@@ -16,7 +16,10 @@ module.exports = {
   // style normal help text
   group: s => c().white(s),
   flags: (s, type) => {
-    if (type.datatype === 'command') return c().magenta(s)
+    if (type.datatype === 'command') {
+      s = s.split(' ')
+      return c().magenta(s[0]) + (s[1] ? ' ' + c().green(s.slice(1).join(' ')) : '')
+    }
     return s[0] === '-' ? c().cyan(s) : c().green(s)
   },
   hints: s => c().dim(s),

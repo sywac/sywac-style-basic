@@ -32,7 +32,7 @@
   },
   "homepage": "http://sywac.io/docs/sync-config.html#style",
   "dependencies": {
-    "chalk": "^2.4.1"
+    "chalk": "^2.4.2"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",

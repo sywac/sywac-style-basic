@@ -23,7 +23,7 @@ This will add style hooks to make your CLI help text colorful/pretty.
 
 Note that this package DOES NOT wrap/include/come with sywac - you should have sywac as a sibling dependency.
 
-Visit http://sywac.io/docs/sync-config.html#style for detailed documentation.
+Visit https://sywac.io/docs/sync-config.html#style for detailed documentation.
 
 ## Install
 

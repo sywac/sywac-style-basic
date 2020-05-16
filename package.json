@@ -1,6 +1,6 @@
 {
   "name": "sywac-style-basic",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Basic color styling for your sywac CLI",
   "main": "index.js",
   "files": [

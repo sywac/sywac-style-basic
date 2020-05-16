@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/sywac/sywac-style-basic/issues"
   },
-  "homepage": "http://sywac.io/docs/sync-config.html#style",
+  "homepage": "https://sywac.io/docs/sync-config.html#style",
   "dependencies": {
     "chalk": "^4.0.0"
   },

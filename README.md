@@ -7,6 +7,9 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Greenkeeper badge](https://badges.greenkeeper.io/sywac/sywac-style-basic.svg)](https://greenkeeper.io/)
 
+![Default Help Screenshot](screenshot1.png)
+![Error Message Screenshot](screenshot2.png)
+
 Easily add "basic" color styling to your sywac CLI:
 
 ```js
